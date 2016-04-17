@@ -15,7 +15,7 @@ Vagrant.configure(2) do |config|
 
   # Activate NFS folder sync
   config.vm.network :private_network, ip: "192.168.42.42"
-  config.vm.synced_folder "../", "/vagrant", type: "nfs"
+  config.vm.synced_folder ".", "/vagrant", type: "nfs"
 
   config.vm.provision "shell", path: "provision.sh"
 end
